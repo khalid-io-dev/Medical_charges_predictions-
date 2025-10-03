@@ -17,6 +17,7 @@ The dataset used includes key attributes such as:
 
 ## 🗂️ Project Structure
 
+```bash
 project/
 ├── data/
 │ └── assurance-maladie.csv # Dataset file
@@ -37,104 +38,36 @@ project/
 ├── main.py # Main script to run the pipeline
 └── README.md
 
+```
 
-
----
-
-## 🧩 Feature Stories
-
-### **Feature Story 1: Data Analysis and Preparation**
-**Objective:** Ensure the dataset is clean, consistent, and ready for model training.  
-
-**Tasks:**
-1. **Load Data**
-   - Import data using Pandas  
-   - Inspect column types and structure  
-
-2. **Exploratory Data Analysis (EDA)**
-   - Generate descriptive statistics  
-   - Identify missing values and duplicates  
-   - Visualize distributions (histograms, pairplots, heatmaps)  
-   - Explore correlations among variables  
-
-3. **Data Preprocessing**
-   - Handle missing values (median/mode)
-   - Remove duplicates  
-   - Detect and treat outliers (IQR or z-score)  
-   - Encode categorical variables (one-hot or label encoding)  
-   - Split data into training/test sets (80%/20%)  
-   - Apply normalization or standardization (MinMaxScaler / StandardScaler)  
-
----
-
-### **Feature Story 2: Training Regression Models**
-**Objective:** Train multiple regression models and evaluate their initial performance.  
-
-**Models:**
-- Linear Regression  
-- Random Forest Regressor  
-- XGBoost Regressor  
-- Support Vector Regressor (SVR)
-
-**Tasks:**
-- Train models with default hyperparameters  
-- Integrate preprocessing and training using Scikit-learn Pipelines  
-- Evaluate performance (RMSE, MAE, R²)  
-- Record results for comparison  
-
----
-
-### **Feature Story 3: Hyperparameter Tuning**
-**Objective:** Optimize the best-performing models to improve prediction accuracy.  
-
-**Tasks:**
-- Select top models from previous step  
-- Perform **GridSearchCV** or **RandomizedSearchCV** with cross-validation (5 folds)  
-- Tune parameters (e.g., `n_estimators`, `max_depth`, `learning_rate`, `min_samples_split`)  
-- Compare pre- and post-tuning performance  
-- Retrain optimized models on full training data  
-
----
-
-### **Feature Story 4: Model Evaluation and Comparison**
-**Objective:** Evaluate all optimized models and choose the final one.  
-
-**Tasks:**
-- Create comparison visualizations (residual plots, prediction vs. actual)  
-- Build a summary table (RMSE, MAE, R²) for all models  
-- Select the final model based on performance and stability  
-
----
-
-### **Feature Story 5: Model Testing and Deployment**
-**Objective:** Test the final model and provide a simple interface for predictions.  
-
-**Tasks:**
-- Export final model (`joblib.dump()` or `pickle`)  
-- Create an interface (CLI or web form) to input user data  
-- Use the trained model to predict estimated medical charges  
 
 ---
 
 ## ⚙️ Installation and Setup
 
 ### **1️⃣ Clone the repository**
+
 ```bash
 git clone https://github.com/khalid-io-dev/Medical_charges_predictions-
 cd Medical_charges_predictions-
+```
 
  ---
 
 
 Make sure you have Python 3.8+ installed, then run:
 
+```bash
 pip install -r requirements.txt
+```
 
-3️⃣ Run the main script
+## 3️⃣ Run the main script
 
+```bash
 python main.py
+```
 
-🧠 Technologies Used
+## 🧠 Technologies Used
 
 Python 3.x
 
@@ -150,7 +83,7 @@ XGBoost – Gradient boosting model
 
 Joblib – Model persistence
 
-📈 Evaluation Metrics
+## 📈 Evaluation Metrics
 
 Each model is evaluated using:
 
@@ -160,7 +93,7 @@ MAE (Mean Absolute Error)
 
 R² (Coefficient of Determination)
 
-🧾 Expected Outcomes
+## 🧾 Expected Outcomes
 
 A trained and optimized model capable of predicting medical costs based on user input
 
